@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%extends  'firstapp/base.html'%}
+{%block body_block%}
+<h1>DISPLAY ALL EMPLOYESS DATA</h1>
+<table border="2">
+  <thead>
+    <th>EMPLOYEE NUMBER</th>
+    <th>EMPLOYEE NAME</th>
+    <th>EMPLOYEE SALARY</th>
+    <th>EMPLOYEE ADDRESS</th>
+    <th>ACTIONS</th>
+    <th>KING</th>
+  </thead>
+  {%for i in emp%}
+<tr>
+  <td>{{i.eno}}</td>
+  <td>{{i.ename}}</td>
+  <td>{{i.esal}}</td>
+  <td>{{i.eaddr}}</td>
+  <td><a href="/update/{{i.id}}">UPDATE</a></td>
+  <td><a href="/delete/{{i.id}}">DELETE</a></td>
+</tr>
+{%endfor%}
+</table><br>
+<a href="/insert/" class="btn btn-primary btn lg">Do u WANT iNSERT a RECORD</a>
+{%endblock%}

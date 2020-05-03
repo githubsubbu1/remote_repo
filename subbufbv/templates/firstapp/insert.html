@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{%extends  'firstapp/base.html'%}
+{%block body_block%}
+<h1>THIS IS EMPLOYEEFORM TO INSERT DETAILS</h1>
+<form method="post">
+  <table border="2">
+  {{form}}
+  </table>
+  {%csrf_token%}
+  <br>
+  <input type="submit"  class="btn btn-success btn-lg"name="" value="Insert Record">
+
+</form>
+{%endblock%}
